@@ -74,7 +74,7 @@ namespace strumpack {
    * \see SparseSolverMPIDist,
    * SparseSolverMixedPrecision
    */
-  template<typename scalar_t,typename integer_t=int>
+  template<typename scalar_t,typename integer_t=int64_t>
   class SparseSolverBase {
 
     using SpMat_t = CompressedSparseMatrix<scalar_t,integer_t>;

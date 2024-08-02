@@ -46,8 +46,8 @@
 namespace strumpack {
 
   // forward declarations
-  template<typename scalar_t,typename integer_t> class MatrixReordering;
-  template<typename scalar_t,typename integer_t> class EliminationTree;
+  template<typename scalar_t,typename integer_t=int64_t> class MatrixReordering;
+  template<typename scalar_t,typename integer_t=int64_t> class EliminationTree;
   class TaskTimer;
 
   /**
@@ -70,7 +70,7 @@ namespace strumpack {
    *
    * \see SparseSolverMPIDist
    */
-  template<typename scalar_t,typename integer_t=int>
+  template<typename scalar_t,typename integer_t=int64_t>
   class SparseSolver :
     public SparseSolverBase<scalar_t,integer_t> {
 
@@ -262,7 +262,7 @@ namespace strumpack {
     using SPBase_t::solve_internal;
   };
 
-  template<typename scalar_t,typename integer_t>
+  template<typename scalar_t,typename integer_t=int64_t>
   using StrumpackSparseSolver = SparseSolver<scalar_t,integer_t>;
 
 } //end namespace strumpack

@@ -41,7 +41,7 @@
 namespace strumpack {
 
   // forward declarations
-  template<typename scalar_t,typename integer_t> class MatrixReorderingMPI;
+  template<typename scalar_t,typename integer_t=int64_t> class MatrixReorderingMPI;
 
   /**
    * \class SparseSolverMPIDist
@@ -67,7 +67,7 @@ namespace strumpack {
    *
    * \see SparseSolver
    */
-  template<typename scalar_t,typename integer_t>
+  template<typename scalar_t,typename integer_t=int64_t>
   class SparseSolverMPIDist :
     public SparseSolverBase<scalar_t,integer_t> {
 
@@ -340,7 +340,7 @@ namespace strumpack {
     std::unique_ptr<EliminationTreeMPIDist<scalar_t,integer_t>> tree_mpi_dist_;
   };
 
-  template<typename scalar_t,typename integer_t>
+  template<typename scalar_t,typename integer_t=int64_t>
   using StrumpackSparseSolverMPIDist =
     SparseSolverMPIDist<scalar_t,integer_t>;
 
